@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mana spēle</title>
+<title>Picas grozā</title>
 <style>
 /* Pamata izkārtojums — šīs rindas nemaini */
 body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; background-color: #f8fafc; color: #1e293b; }
@@ -18,15 +18,13 @@ img { max-width: 100%; height: auto; }
 </style>
 </head>
 <body>
-<h1>Spēlētāja punktu aprēķins</h1>
+<h1>Picas grozā</h1>
 <!-- 2. un 3. UZDEVUMS: šeit zem virsraksta pievieno <p id="noteikumi"> rindkopu ar punktu noteikumiem -->
 <div class="panelis">
-  <label for="vards">Spēlētāja vārds</label>
-  <input id="vards" value="Spēlētājs">
-
+  <label for="vards">Lietotājvārds</label>
+  <input id="vards" value="Lote">
   <label for="skaits">Savākto zvaigžņu skaits</label>
   <input id="skaits" type="number" min="0" value="2">
-
   <button onclick="paradit()">Aprēķināt punktus</button>
   <p id="atbilde">Nospied pogu, lai redzētu rezultātu.</p>
 </div>
