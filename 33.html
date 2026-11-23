@@ -20,7 +20,7 @@ img { max-width: 100%; height: auto; }
 <body>
 <h1>Pārbaudi punktus</h1>
 <!-- 3. UZDEVUMS: šeit zem virsraksta pievieno <p id="noteikumi"> rindkopu ar uzvaras mērķi -->
-<p id="noteikumi">Uzvaras mērķis: iegūsti 10 vai vairāk punktus.</p>
+<p id="noteikumi">Uzvaras mērķis: Uzvarai vajag 20 punktus.</p>
 <div class="panelis">
   <label for="skaits">Picas grozā</label>
   <input id="skaits" type="number" value="0">
@@ -35,11 +35,12 @@ function parbaudit() {
 
   // === 2. un 3. UZDEVUMS — MAINI ŠEIT: punktu pārbaude ar if / else if / else ===
   if (punkti < 0) {
-    zina = "Kļūda: punkti nevar būt negatīvi!";
-  } else if (punkti >= 10) {
-    zina = "Uzvara!";
+    zina = "Kļūda: punktu skaits nedrīkst būt negatīvs!";
+  } else if (punkti >= 20) {
+    zina = "Apsveicu! Tu uzvarēji, savācot 20 vai vairāk punktus!";
   } else {
-    zina = "Turpini spēli!";
+    const atlikušie Punkti = 20 - punkti;
+    zina = "Turpini spēli — līdz uzvarai nepieciešami vēl " + atlikušie Punkti + " punkti!";
   }
 
   // === GATAVĀ DAĻA — parāda izvēlēto ziņu lapā (nemaini) ===
