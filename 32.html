@@ -21,12 +21,14 @@ img { max-width: 100%; height: auto; }
 <h1>Picas grozā</h1>
 <!-- 2. un 3. UZDEVUMS: šeit zem virsraksta pievieno <p id="noteikumi"> rindkopu ar punktu noteikumiem -->
 <div class="panelis">
+
   <label for="vards">Lietotājvārds</label>
   <input id="vards" value="Lote">
   <label for="skaits">Savākto zvaigžņu skaits</label>
   <input id="skaits" type="number" min="0" value="2">
   <button onclick="paradit()">Aprēķināt punktus</button>
   <p id="atbilde">Nospied pogu, lai redzētu rezultātu.</p>
+  <p id="noteikumi">Viena pica dod 10 punktus un spēlētājs saņem arī 5 sākuma punktus.</p>
 </div>
 <script>
 // Funkcija izpildās katru reizi, kad spēlētājs nospiež pogu.
@@ -36,7 +38,7 @@ function paradit() {
   const skaits = Number(document.getElementById("skaits").value);
 
   // === 2. un 3. UZDEVUMS — MAINI ŠEIT: punktu aprēķina formula ===
-  const punkti = skaits * 5;
+  const punkti = skaits * 10 + 5; // katra pica dod 10 punktus
 
   // === GATAVĀ DAĻA — parāda aprēķināto atbildi lapā ===
   document.getElementById("atbilde").textContent = vards + ": " + punkti + " punkti";
